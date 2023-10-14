@@ -1,0 +1,113 @@
+.p__syne {
+  font-family: var(--font-base);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--color-bluebayoux);
+}
+
+.p__basic{
+  font-family: var(--font-base);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--color-aluminium);
+}
+
+.a__basic{
+  font-family: var(--font-base);
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  color: var(--color-bluebayoux);
+}
+
+.a__basic:hover{
+  text-decoration: underline;
+}
+
+.glow{
+  text-shadow: 2px 0px 17px rgba(255, 255, 255, 0.35);
+}
+
+.p__mysin {
+  font-family: var(--font-base);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color: var(--color-mysin);
+}
+.li__syne {
+  font-family: var(--font-base);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--color-white);
+}
+
+.li__blue{
+  font-family: var(--font-base);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--color-bluebayoux);
+  margin-left: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.h1__syne {
+  font-family: var(--font-base);
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  color: var(--color-white);
+  margin-bottom: 10px;
+}
+
+.h2__syne {
+  font-family: var(--font-base);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-mysin);
+}
+
+.h3__syne{
+  font-family: var(--font-base);
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--color-white);
+}
+
+.hr__line-left {
+  position: absolute;
+  left: 4rem;
+  width: 50%;
+  height: 1px;
+  background-color: var(--color-oxfordblue);
+  margin: 2rem 0;
+}
+
+.hr__line-right {
+  position: absolute;
+  right: 4rem;
+  width: 50%;
+  height: 1px;
+  background-color: var(--color-oxfordblue);
+  margin: 2rem 0;
+}
+
+.custom__button{
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
+  background-color: var(--color-oxfordblue);
+  font-family: var(--font-base);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-white);
+}
+
+.custom__button:hover{
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.custom__button:active{
+  opacity: 0.6;
+  transition: opacity 0.3s ease-in-out;
+}

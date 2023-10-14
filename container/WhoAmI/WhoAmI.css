@@ -1,0 +1,20 @@
+.app__whoami{
+    padding-left: 4rem;
+    padding-right: 8rem;
+    margin-top: 3rem;
+}
+
+.app__whoami p {
+    line-height: 30px;
+}
+
+.app__whoami a:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 650px) {
+    .app__whoami{
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}

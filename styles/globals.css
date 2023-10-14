@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap');
+:root{
+  --font-base: 'Syne', serif;
+
+  --color-richblack: #00030a;
+  --color-oxfordblue: #2a333c;
+  --color-bluebayoux: #637485;
+  --color-aluminium: #9a9a9a;
+  --color-white: #ffffff;
+  --color-mysin: #ffb41f;
+  --color-caferoyale: #703e05;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+body{
+  background-color: var(--color-richblack);
+}

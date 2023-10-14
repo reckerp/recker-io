@@ -1,0 +1,89 @@
+.app__receipt{
+    width: 400px;
+    padding: 1rem;
+    background-color: var(--color-mysin);
+    transition: ease-in-out 0.2s;
+}
+
+.app__receipt-heading{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: var(--color-richblack);
+    color: var(--color-mysin);
+    font-size: 2rem;
+    font-family: var(--font-base);
+    font-weight: 800;
+}
+
+.app__receipt-frame{
+    font-family: var(--font-base);
+    margin-top: 1.5rem;
+    border-bottom: 1px solid var(--color-caferoyale);
+}
+
+.app__receipt-frame_name p{
+    color: var(--color-caferoyale);
+}
+
+.app__receipt-frame_content p{
+    color: var(--color-richblack);
+    font-size: 1.2rem;
+    margin-top: .5rem;
+    margin-bottom: 0.5rem;
+}
+
+.app__receipt-message{
+    margin-top: 2rem;
+}
+
+.app__receipt-message_logo{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    font-family: var(--font-base);
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.app__receipt-message_frame{
+    font-family: var(--font-base);
+    margin-top: 2rem;
+    color: var(--color-caferoyale);
+}
+
+.app__receipt-message_frame-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    border: 1px solid var(--color-caferoyale);
+    color: var(--color-richblack);
+}
+
+.app__receipt-message_barcode{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-base);
+    color: var(--color-caferoyale);
+    margin-top: 2rem;
+}
+
+.app__receipt-message_barcode p:last-child{
+    font-size: .75rem;
+    margin-top: -5px;
+}
+
+.icon__royale{
+    color: var(--color-caferoyale);
+}
+
+
+@media screen and (max-width: 650px) {
+    .app__receipt{
+        width: 275px;
+    }
+}

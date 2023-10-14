@@ -1,0 +1,40 @@
+.app__footer{
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.app__footer img{
+    width: 50px;
+}
+
+.app__footer h1{
+    font-family: var(--font-base);
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    color: var(--color-white);
+    margin: 0;
+}
+
+.app__footer p{
+    color: var(--color-oxfordblue);
+    font-family: var(--font-base);
+    font-weight: 600;
+}
+
+.app__footer-icons{
+    margin-top: 1rem;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.app__footer-icons img{
+    width: 35px;
+    cursor: pointer;
+}

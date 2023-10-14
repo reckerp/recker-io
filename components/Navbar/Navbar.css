@@ -1,0 +1,126 @@
+.app__navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-richblack);
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--color-bluebayoux);
+}
+
+.app__navbar-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.app__navbar-logo img {
+    width: 50px;
+}
+
+.app__navbar-links {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
+
+    list-style: none;
+}
+
+.app__navbar-links li {
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.app__navbar-links li:last-child {
+    color: var(--color-richblack);
+    background-color: var(--color-white);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+}
+
+.app__navbar-links li:last-child:hover {
+    opacity: 0.8;
+    color: var(--color-richblack);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.app__navbar-links li:hover {
+    color: var(--color-aluminium);
+    transition: color 0.3s ease-in-out;
+}
+
+
+.app__navbar-small-screen {
+    display: none;
+}
+
+.app__navbar-small-screen_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--color-richblack);
+    transition: 0.5s ease;
+    flex-direction: column;
+    z-index: 99;
+}
+
+.app__navbar-small-screen_overlay .overlay__close {
+    font-size: 27px;
+    color: var(--color-white);
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.app__navbar-small-screen_links {
+    list-style: none;
+    margin-top: 3rem;
+}
+
+.app__navbar-logo{
+    padding: 0.5rem;
+}
+
+.app__navbar-small-screen_links li {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    color: var(--color-white);
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: var(--font-base);
+}
+
+.app__navbar-small-screen_links li:hover {
+    color: var(--color-white);
+}
+
+@media screen and (max-width: 2000px) {
+    .app__navbar-logo img {
+        width: 55px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .app__navbar-links {
+        display: none;
+    }
+
+    .app__navbar-small-screen {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .app__navbar {
+        padding: 1rem;
+    }
+
+    .app__navbar-logo img {
+        width: 60px;
+    }
+}
