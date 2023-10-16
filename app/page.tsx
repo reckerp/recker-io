@@ -1,7 +1,7 @@
 import React from 'react';
 
 import '../styles/page.css';
-import {Footer, Gallery, Hero, TechStack, WhoAmI} from '@/container';
+import {Gallery, Hero, TechStack, WhoAmI} from '@/container';
 
 const App = () => (
     <>

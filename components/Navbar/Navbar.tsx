@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
 import images from "../../constants/images";
-
+import Link from 'next/link';
 import './Navbar.css';
 
 const Navbar: React.FC = () => {
@@ -19,12 +19,14 @@ const Navbar: React.FC = () => {
   return (
     <nav className="app__navbar">
     <div className="app__navbar-logo">
-        <Image
-            src={images.logo}
-            alt="Recker"
-            width={50}
-            height={50}
-        />
+    <Link href={'/'}>
+    <Image
+    src={images.logo}
+    alt="Recker"
+    width={50}
+    height={50}
+    />
+    </Link>
     </div>
     <ul className="app__navbar-links">
         {menuItems.map((item, index) => (
@@ -40,7 +42,7 @@ const Navbar: React.FC = () => {
                 <MdClose fontSize={27} className="overlay__close"
                     onClick={() => setToggleMenu(false)}/>
                 <div className="app__navbar-logo">
-                    <img src={images.logo} alt="Recker"/>
+                    <Image src={images.logo} alt="Recker" width={50} height={50}/>
                 </div>
                 <ul className="app__navbar-small-screen_links">
                     {menuItems.map((item, index) => (

@@ -1,5 +1,6 @@
 .app__footer{
-    margin-top: 8rem;
+    margin-top: auto;
+    padding-top: 8rem; 
     margin-bottom: 2rem;
 
     display: flex;
@@ -9,6 +10,7 @@
 
 .app__footer img{
     width: 50px;
+    height: auto
 }
 
 .app__footer h1{
@@ -24,6 +26,19 @@
     color: var(--color-oxfordblue);
     font-family: var(--font-base);
     font-weight: 600;
+}
+.app__footer-links{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+}
+.app__footer-links_seperator {
+    margin: 0 10px;
+}
+.app__footer-links_link{
+    color: var(--color-oxfordblue);
+    font-family: var(--font-base);
+    font-weight: 500;
 }
 
 .app__footer-icons{
