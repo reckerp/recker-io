@@ -40,6 +40,7 @@
     }
     .app__hero-welcome img{
         width: 75vw;
+        height: 100px;
     }
 }
 
