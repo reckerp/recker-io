@@ -9,12 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "13.5.4",
+    "client-only": "^0.0.1",
+    "next": "^13.5.5",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.11.0"
   },
   "devDependencies": {
+    "@types/gtag.js": "^0.0.17",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

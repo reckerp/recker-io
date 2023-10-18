@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
             <div className="app__footer-links">
               <Link className='app__footer-links_link' href="/imprint">Imprint</Link>
               <p className='app__footer-links_seperator'>|</p>
-              <Link className='app__footer-links_link' href="/imprint">Privacy</Link>
+              <Link className='app__footer-links_link' href="/privacy-policy">Privacy</Link>
             </div>
             <div className="app__footer-icons">
                 <a href="https://github.com/reckerp"><Image src={images.icon_github} alt='Github'/></a>

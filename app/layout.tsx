@@ -1,9 +1,8 @@
-import { Navbar } from '@/components'
+import { GoogleAnalytics, Navbar, CookieBanner } from '@/components'
 import '../styles/globals.css'
 import '../styles/page.css'
 import type { Metadata } from 'next'
 import { Footer } from '@/container'
-
 
 export const metadata: Metadata = {
   title: 'Paul Recker - Software Engineer',
@@ -17,11 +16,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+    <GoogleAnalytics GA_MEASUREMENT_ID='G-36BQ1908SG'/>
       <body>
         <Navbar />
           <main>
             {children}
-          </main> 
+          </main>
+          <CookieBanner />
           <Footer />
         </body>
     </html>
