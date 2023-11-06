@@ -41,10 +41,10 @@ const CookieBanner = () => {
             {showCookieBanner &&
                 <div className='app__CookieBanner'>
                     <div className='app__CookieBanner__heading-container'>
-                        <h3 className='h3__syne'>Take some cookies!</h3>
+                        <h3 className='h3__syne'>Have some cookies!</h3>
                         <button className='a__basic' onClick={() => handleClick(false)}>[X]</button>
                     </div>
-                    <p className='p__basic'>This website uses cookies to enhance your browsing experience and analyze site traffic to improve its services.</p>
+                    <p className='p__basic'>This website uses <a href='/privacy-policy' style={{ textDecoration: 'underline' }}>cookies</a> to enhance your browsing experience and analyze site traffic to improve its services.</p>
                     <div className="app__CookieBanner__button-container">
                         <button className='a__basic' onClick={() => handleClick(true)}>[Accept]</button>
                         <button className='a__basic' onClick={() => handleClick(false)}>[Decline]</button>

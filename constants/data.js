@@ -2,45 +2,47 @@ import images from "./images";
 
 const projects = [
     {
-        subTitle: "WebApp",
-        title: 'Bib Gourmond',
-        imgUrl: images.project_example,
-        descr: 'Occaecat adipisicing officia cupidatat consequat ipsum in labore non proident.',
-        gh_link: ''
-    },
-    {
-        subTitle: "Backend Service",
-        title: 'Bib Gourmond',
-        imgUrl: images.project_example,
-        descr: 'Occaecat adipisicing officia cupidatat consequat ipsum in labore non proident.',
-        gh_link: ''
-    },
-    {
-        subTitle: "Web3",
-        title: 'Bib Gourmond',
-        imgUrl: images.project_example,
-        descr: 'Occaecat adipisicing officia cupidatat consequat ipsum in labore non proident.',
-        gh_link: ''
-    },
-    {
-        subTitle: "Python",
-        title: 'Bib Gourmond',
-        imgUrl: images.project_example,
-        descr: 'Occaecat adipisicing officia cupidatat consequat ipsum in labore non proident.',
+        subTitle: "Next.js",
+        title: 'recker.io',
+        imgUrl: images.portfolio_image,
+        descr: 'Portfolio showcasing web development projects built with Next.js.',
         gh_link: ''
     },
     {
         subTitle: "React",
-        title: 'Bib Gourmond',
-        imgUrl: images.project_example,
-        descr: 'Occaecat adipisicing officia cupidatat consequat ipsum in labore non proident.',
+        title: 'Restaurant Website',
+        imgUrl: images.gericht_image,
+        descr: 'A frontend website designed for a restaurant and built with React.',
+        gh_link: 'https://github.com/reckerp/react-restaurant'
+    },
+    {
+        subTitle: "PHP Webapplication",
+        title: 'EarShot',
+        imgUrl: images.earshot_image,
+        descr: 'Music streaming platform built for artists and listeners with PHP.',
         gh_link: ''
-    }]
+    },
+    {
+        subTitle: "Java Desktop Application",
+        title: 'Flight Management Tool',
+        imgUrl: images.flight_image,
+        descr: 'Flight management tool for airlines, built with JavaFX.',
+        gh_link: ''
+    },
+    {
+        subTitle: "Java Desktop Game",
+        title: 'BlackJack Simulator',
+        imgUrl: images.blackjack_image,
+        descr: 'Blackjack simulator created with Java Swing in a project course.',
+        gh_link: ''
+    },
+]
 
 
 const pl = [
     "Java",
     "JavaScript",
+    "TypeScript",
     "Python",
     "PHP",
     "SQL",
@@ -53,7 +55,7 @@ const pl = [
 const tech = [
     "Node.js",
     "React",
-    "Spring Boot",
+    "Next.js",
     "Git",
     "Github",
     "Docker",
@@ -61,17 +63,13 @@ const tech = [
 ]
 
 const other = [
-    "APIs",
+    "RESTful APIs",
+    "Backend development",
     "Web design (Figma)",
     "Web Scraping",
     "Cyber Security",
     "",
-    "Teamwork",
-    "English, German, Latin",
-    "Agile Project management (Scrum)",
-    "",
-    "Microsoft Office",
-    "macOS, Linux, Windows"
+    "German(native), English(C1)"
 ]
 
 // eslint-disable-next-line import/no-anonymous-default-export
