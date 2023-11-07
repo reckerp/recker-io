@@ -1,13 +1,13 @@
 import React from 'react'
 import { Heading } from '@/components'
 import type { Metadata } from 'next'
- 
+
 export const metadata: Metadata = {
-  robots: {
-    index: false,
-    follow: false,
-    nocache: true,
-  }
+    robots: {
+        index: false,
+        follow: false,
+        nocache: true,
+    }
 }
 
 const Imprint = () => {
@@ -18,7 +18,7 @@ const Imprint = () => {
             <br />
             <h2 className='h3__syne'>Preamble</h2>
             <p className='p__basic'>
-                With the following data protection declaration, we would like to inform you about the types of your personal data (hereinafter also referred to as "data") that we process, for what purposes and to what extent in the context of providing our application.
+                With the following data protection declaration, we would like to inform you about the types of your personal data (hereinafter also referred to as &quot;data&quot;) that we process, for what purposes and to what extent in the context of providing our application.
 
                 The terms used are not gender-specific.
                 <br /> <br />
@@ -93,9 +93,9 @@ const Imprint = () => {
                 information according to the Swiss Federal Law on Data Protection (Swiss DSG) as well as according to the
                 Basic Data Protection Regulation (DSGVO). For this reason, we ask you to note that due to the broader
                 spatial application and comprehensibility, the terms of the DSGVO are used. In particular, instead of the terms used in the
-                Instead of the Swiss DPA terms "processing" of "personal data", "overriding interest" and "particularly
-                personal data worthy of protection", the terms "processing" of "personal data" and "legitimate interest" used in the DSGVO are used.
-                data" as well as "legitimate interest" and "special categories of data" are used. The legal meaning of the
+                Instead of the Swiss DPA terms &quot;processing&quot; of &quot;personal data&quot;, &quot;overriding interest&quot; and &quot;particularly
+                personal data worthy of protection&quot;, the terms &quot;processing&quot; of &quot;personal data&quot; and &quot;legitimate interest&quot; used in the DSGVO are used.
+                data&quot; as well as &quot;legitimate interest&quot; and &quot;special categories of data&quot; are used. The legal meaning of the
                 terms will, however, continue to be determined in accordance with the Swiss DPA within the scope of the applicability of the Swiss DPA.
             </p>
             <br />
@@ -108,7 +108,7 @@ const Imprint = () => {
                 Measures include, in particular, ensuring the confidentiality, integrity and availability of data through
                 controlling physical and electronic access to data, as well as the access, input, transfer, availability and segregation of data.
                 access, input, disclosure, availability, and segregation. Furthermore, we have established procedures
-                procedures in place to ensure the exercise of data subjects' rights, the deletion of data, and the response to data
+                procedures in place to ensure the exercise of data subjects&apos; rights, the deletion of data, and the response to data
                 of the data. Furthermore, we already take the protection of personal data into account during the development
                 and selection of hardware, software and processes in accordance with the principle of data protection, through
                 technology design and through data protection-friendly default settings.
@@ -147,9 +147,9 @@ const Imprint = () => {
                 contractual or legally required transfer (Art. 49 (1) DSGVO). For the rest, we will inform you of the
                 bases of the third country transfer in the case of the individual providers from the third country, whereby the
                 Adequacy Decisions take precedence as bases. Information on third country transfers and available
-                adequacy decisions can be found in the EU Commission's information offering.
+                adequacy decisions can be found in the EU Commission&apos;s information offering.
                 <br />
-                EU-US Trans-Atlantic Data Privacy Framework: Im Rahmen des sogenannten „Data Privacy Framework" (DPF) hat die
+                EU-US Trans-Atlantic Data Privacy Framework: Im Rahmen des sogenannten &quot;Data Privacy Framework&quot; (DPF) hat die
                 EU-Kommission das Datenschutzniveau ebenfalls für bestimmte Unternehmen aus den USA im Rahmen der
                 Angemessenheitsbeschlusses vom 10.07.2023 als sicher anerkannt. Die Liste der zertifizierten Unternehmen als auch
                 weitere Informationen zu dem DPF können Sie der Webseite des Handelsministeriums der USA unter <a
@@ -161,7 +161,7 @@ const Imprint = () => {
             <br />
             <h2 className='h3__syne'>Rights of the persons concerned</h2>
             <p className='p__basic'>
-                Data subjects' rights under the DSGVO: As a data subject, you are entitled to various rights under the DSGVO which
+                Data subjects&apos; rights under the DSGVO: As a data subject, you are entitled to various rights under the DSGVO which
                 in particular from Art. 15 to 21 DSGVO:
             </p>
             <ul className='p__basic'>
@@ -224,7 +224,7 @@ const Imprint = () => {
                 which purposes the cookies are processed by us, we clarify this in the course of this data protection declaration or
                 in the context of our consent and processing procedures.
                 <br />
-                <strong>General information on revocation and objection (so-called "opt-out"):</strong>
+                <strong>General information on revocation and objection (so-called &quot;opt-out&quot;):</strong>
                 Users can revoke the consent they
                 consent at any time and object to the processing in accordance with the legal requirements.
                 object to the processing. For this purpose, users can, among other things, restrict the use of cookies in the settings of their browsers.
@@ -251,8 +251,8 @@ const Imprint = () => {
             <br />
             <h2 className='h3__syne'>Provision of the online offer and web hosting</h2>
             <p className='p__basic'>
-                We process users' data in order to provide them with our online services. For this purpose
-                we process the user's IP address, which is necessary to transmit the content and functions of our online services to the user's
+                We process users&apos; data in order to provide them with our online services. For this purpose
+                we process the user&apos;s IP address, which is necessary to transmit the content and functions of our online services to the user&apos;s
                 to the browser or terminal device of the users.
             </p>
             <ul className='p__basic'>
@@ -269,7 +269,7 @@ const Imprint = () => {
                 <strong>Further guidance on processing operations, procedures and services:</strong>
                 <br />
                 The access to our online offer is logged in the form of so-called
-                so-called "server log files". The server log files may include the address and name of the retrieved
+                so-called &quot;server log files&quot;. The server log files may include the address and name of the retrieved
                 web pages and files, date and time of access, amount of data transferred, notification of successful access,
                 browser type and version, the operating system of the user, referrer URL (the previously visited page) and, as a rule
                 IP addresses and the requesting provider. Die Serverlogfiles können zum einen zu Zwecken der
@@ -285,7 +285,7 @@ const Imprint = () => {
             <br />
             <h2 className='h3__syne'>Web analysis, monitoring and optimization</h2>
             <p className='p__basic'>
-                Web analytics (also referred to as "reach measurement") is used to evaluate the flow of visitors to our
+                Web analytics (also referred to as &quot;reach measurement&quot;) is used to evaluate the flow of visitors to our
                 online offer and may include behavior, interests or demographic information about the visitors, such as the
                 age or gender, as pseudonymous values. With the help of reach analysis, we can, for example.
                 recognize at what time our online offer or its functions or content are most frequently used or
