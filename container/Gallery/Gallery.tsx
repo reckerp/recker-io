@@ -5,6 +5,7 @@ import { Heading } from '../../components';
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import './Gallery.css';
 import data from "../../constants/data";
+import Link from 'next/link';
 
 const Gallery: React.FC = () => {
     const scrollRef = useRef<HTMLDivElement | null>(null);
@@ -34,7 +35,13 @@ const Gallery: React.FC = () => {
                     {data.projects.map((value, index) => (
                         <div className="app__gallery-images_card flex__center" key={`gallery_image-${index + 1}`}>
                             <div className="app__gallery-images_card-design">
-                                <Image src={value.imgUrl} alt="logo" />
+                                {value.demo_link === '' ?
+                                    <Image src={value.imgUrl} alt="logo" />
+                                    :
+                                    <Link href={value.demo_link}>
+                                        <Image className="hover" src={value.imgUrl} alt="logo" />
+                                    </Link>
+                                }
                                 <div className="app__gallery-images_card-description">
                                     <p className="p__mysin" style={{ fontSize: "10px" }}>{value.subTitle}</p>
                                     <h3 className="h3__syne">{value.title}</h3>

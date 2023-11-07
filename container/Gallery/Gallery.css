@@ -73,7 +73,7 @@
     transition: .5s ease;
 }
 
-.app__gallery-images_card:hover img {
+.hover:hover {
     opacity: .35;
 }
 
