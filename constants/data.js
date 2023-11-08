@@ -15,7 +15,7 @@ const projects = [
         imgUrl: images.gericht_image,
         descr: 'A frontend website designed for a restaurant and built with React.',
         gh_link: 'https://github.com/reckerp/react-restaurant',
-        demo_link: ''
+        demo_link: 'https://reckerp.github.io/react-restaurant/'
     },
     {
         subTitle: "PHP Webapplication",
