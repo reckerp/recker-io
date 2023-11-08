@@ -49,9 +49,9 @@ const pl = [
     "JavaScript",
     "TypeScript",
     "Python",
+    "Swift",
     "PHP",
     "SQL",
-    "PL/SQL",
     "",
     "HTML",
     "CSS"
@@ -62,7 +62,6 @@ const tech = [
     "React",
     "Next.js",
     "Git",
-    "Github",
     "Docker",
     "Postgres"
 ]
@@ -70,9 +69,8 @@ const tech = [
 const other = [
     "RESTful APIs",
     "Backend development",
-    "Web design (Figma)",
-    "Web Scraping",
-    "Cyber Security",
+    "Frontend development",
+    "Agile development (Scrum)",
     "",
     "German(native), English(C1)"
 ]
