@@ -1,4 +1,5 @@
 import { GoogleAnalytics, Navbar, CookieBanner } from '@/components'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import '../styles/globals.css'
 import '../styles/page.css'
 import type { Metadata } from 'next'
@@ -36,6 +37,7 @@ export default function RootLayout({
                 </main>
                 <CookieBanner />
                 <Footer />
+                <SpeedInsights />
             </body>
         </html>
     )
