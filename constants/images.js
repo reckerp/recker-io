@@ -8,6 +8,7 @@ import earshot_image from "../assets/earshot.png"
 import blackjack_image from "../assets/blackjack.png"
 import flight_image from "../assets/flight.png"
 import gericht_image from "../assets/gericht.png"
+import itutoru_image from "../assets/itutoru.png"
 
 import icon_linkedin from "../assets/icons/linkedin.svg"
 import icon_github from "../assets/icons/github.svg"
@@ -30,5 +31,6 @@ export default {
     earshot_image,
     blackjack_image,
     flight_image,
-    gericht_image
+    gericht_image,
+    itutoru_image
 }

@@ -10,6 +10,14 @@ const projects = [
         demo_link: 'https://recker.io'
     },
     {
+        subTitle: "SwiftUI & Loopback4",
+        title: 'iTutorU',
+        imgUrl: images.itutoru_image,
+        descr: 'A modern and easy to use tutoring application built with Swift.',
+        gh_link: '',
+        demo_link: ''
+    },
+    {
         subTitle: "React",
         title: 'Restaurant Website',
         imgUrl: images.gericht_image,
