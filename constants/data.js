@@ -18,6 +18,22 @@ const projects = [
         demo_link: ''
     },
     {
+        subTitle: "Next.js & NextAuth.js",
+        title: 'Earmark',
+        imgUrl: images.earmark_image,
+        descr: 'Fullstack webapp to bookmark Spotify audiobooks.',
+        gh_link: 'https://github.com/reckerp/earmark',
+        demo_link: ''
+    },
+    {
+        subTitle: "Go & GinGonic",
+        title: 'Garrio',
+        imgUrl: images.project_example,
+        descr: 'A RESTful realtime API for anonymous chatrooms built with Go.',
+        gh_link: 'https://github.com/reckerp/garrio-server',
+        demo_link: ''
+    },
+    {
         subTitle: "React",
         title: 'Restaurant Website',
         imgUrl: images.gericht_image,
@@ -58,7 +74,7 @@ const pl = [
     "TypeScript",
     "Python",
     "Swift",
-    "PHP",
+    "Go",
     "SQL",
     "",
     "HTML",
