@@ -304,7 +304,7 @@ const Imprint = () => {
                 <strong>PostHog: </strong>
                 We use PostHog to measure and analyze the use of our online offer on the basis of a pseudonymous user identification number. PostHog processes data on our behalf to record user interactions on our website and provide us with analytics. This helps us understand how users interact with our website and improve the user experience.
                 <br />
-                PostHog uses cookies or similar recognition technologies to collect information about your use of our website. The data is processed on servers located in the European Union (EU), specifically using PostHog's EU-hosted cloud offering. This ensures that your data remains within the EU and is subject to the protections of the GDPR.
+                PostHog uses cookies or similar recognition technologies to collect information about your use of our website. The data is processed on servers located in the European Union (EU), specifically using PostHog&apos;s EU-hosted cloud offering. This ensures that your data remains within the EU and is subject to the protections of the GDPR.
                 <br />
                 The data collected includes:
                 <ul className='p__basic'>
@@ -316,7 +316,7 @@ const Imprint = () => {
                 <br />
                 We have configured PostHog to respect user privacy choices. If you decline cookies through our cookie banner, PostHog will not track your activities. 
                 <br />
-                For more information about PostHog's privacy practices, please visit: <a href="https://posthog.com/privacy" target="_blank" rel="noopener noreferrer">https://posthog.com/privacy</a>
+                For more information about PostHog&apos;s privacy practices, please visit: <a href="https://posthog.com/privacy" target="_blank" rel="noopener noreferrer">https://posthog.com/privacy</a>
                 <br />
                 <strong>Legal basis:</strong> Consent (Art. 6 para. 1 p. 1 lit. a) DSGVO).
                 <br />
