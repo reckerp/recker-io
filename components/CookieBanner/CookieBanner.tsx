@@ -4,37 +4,43 @@ import './CookieBanner.css';
 
 import { useState, useEffect } from 'react';
 import { getLocalStorage, setLocalStorage } from '../../utils/storageHelper';
+import posthog from 'posthog-js';
 
 const CookieBanner = () => {
-    const [cookieConsent, setCookieConsent] = useState(false);
+    const [cookieConsent, setCookieConsent] = useState<boolean | null>(null);
     const [showCookieBanner, setShowCookieBanner] = useState(false);
+    
     useEffect(() => {
         const storedCookieConsent = getLocalStorage("cookie_consent", null)
         console.log("storedCookieConsent: ", storedCookieConsent)
         setCookieConsent(storedCookieConsent)
+        
         if (storedCookieConsent === null) {
             setShowCookieBanner(true)
+            // Opt out by default until user consents
+            posthog.opt_out_capturing()
+        } else if (storedCookieConsent === true) {
+            // If user previously consented, opt in
+            posthog.opt_in_capturing()
+        } else {
+            // If user previously declined, ensure opt out
+            posthog.opt_out_capturing()
         }
-
-    }, [setCookieConsent])
-
+    }, [])
 
     useEffect(() => {
-        const newValue = cookieConsent ? 'granted' : 'denied'
-        console.log("newValue: ", newValue)
-        window.gtag("consent", 'update', {
-            'analytics_storage': newValue
-        });
-
+        if (cookieConsent === true) {
+            posthog.opt_in_capturing()
+        } else if (cookieConsent === false) {
+            posthog.opt_out_capturing()
+        }
     }, [cookieConsent]);
-
 
     const handleClick = (accept: boolean) => {
         setCookieConsent(accept)
         setLocalStorage("cookie_consent", accept)
         setShowCookieBanner(false)
     }
-
 
     return (
         <>
