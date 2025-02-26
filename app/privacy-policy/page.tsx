@@ -298,78 +298,29 @@ const Imprint = () => {
                 data and information can be stored in a browser or in a terminal device and read from it.
                 read from this. The information collected includes, in particular, websites visited and elements used there, as well as technical
                 elements used there as well as technical data, such as the browser used, the computer system used as well as information about
-                times of use. If users have given their consent to the collection of their location data to us or to the providers of the
-                providers of the services we use, location data may also be processed.
+                usage times. If users have consented to the collection of their location data from us or from the providers of the
+                services we use, location data may also be processed.
                 <br />
-                The IP addresses of the users are also stored. However, we use an IP masking procedure (i.e..,
-                pseudonymization by shortening the IP address) to protect users. In general, the data collected in the context of web analytics,
-                A/B testing and optimization, no clear user data (such as e-mail addresses or names) is stored, but rather
-                pseudonyms. This means that we, as well as the providers of the software used, do not know the actual identity of the users.
-                only the information stored in their profiles for the purposes of the respective procedures.
-            </p>
-            <ul className='p__basic'>
-                <li><strong>Types of data processed:</strong> Usage data (e.g. web pages visited, interest in content,
-                    access times); meta, communication and procedural data (e.g. .IP addresses, time,
-                    identification numbers, consent status).</li>
-                <li><strong>Affected persons:</strong> Users (e.g. .website visitors, users of online services)..</li>
-                <li><strong>Purposes of processing:</strong> reach measurement (e.g. access statistics, detection of
-                    returning visitors); profiles with user-related information (creation of user profiles).
-                    Provision of our online offer and user friendliness.</li>
-                <li><strong>Security measures:</strong> IP masking (pseudonymization of the IP address).</li>
-                <li><strong>Legal basis:</strong> Legitimate interests (Art. 6 para. 1 p. 1 lit. f) DSGVO).</li>
-            </ul>
-            <br />
-            <p className='p__basic'>
-                <strong>Further guidance on processing operations, procedures and services:</strong>
+                <strong>PostHog: </strong>
+                We use PostHog to measure and analyze the use of our online offer on the basis of a pseudonymous user identification number. PostHog processes data on our behalf to record user interactions on our website and provide us with analytics. This helps us understand how users interact with our website and improve the user experience.
                 <br />
-                <strong>Google Analytics 4: </strong>
-                We use Google Analytics to measure and analyze the use of our online offer on the basis of a pseudonymous user identification number.
-                online offer on the basis of a pseudonymous user identification number. This identification number
-                does not contain any unique data, such as names or e-mail addresses. It is used to assign analysis information to an
-                information to an end device in order to recognize which contents the users have called up within one or more
-                which content users have accessed within one or more usage processes, which search terms they have used, which they have accessed again, or which they have
-                have interacted with our online offer. Likewise, the time of use and its duration are
-                the sources of the users that refer to our online offer and technical aspects of their end devices and browsers.
-                end devices and browsers. In the process, pseudonymous profiles of users are created with information from the use of
-                of various devices, whereby cookies may be used. Google Analytics logs and
-                does not store individual IP addresses for EU users. Analytics does, however, provide coarse geographic
-                location data by deriving the following metadata from IP addresses: City (and the derived
-                latitude and longitude of the city), continent, country, region, subcontinent (and ID-based counterparts). For
-                EU traffic, IP address data is used exclusively for this derivation of geolocation data before being
-                before they are immediately deleted. They are not logged, are not accessible, and are not
-                not used for any other purposes. When Google Analytics collects measurement data, all IP queries are
-                are performed on EU-based servers before the traffic is forwarded to Analytics servers for processing; and
-                is sent;
+                PostHog uses cookies or similar recognition technologies to collect information about your use of our website. The data is processed on servers located in the European Union (EU), specifically using PostHog's EU-hosted cloud offering. This ensures that your data remains within the EU and is subject to the protections of the GDPR.
                 <br />
-                <strong>Service provider:</strong> Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland;
+                The data collected includes:
+                <ul className='p__basic'>
+                    <li>Usage data (e.g., pages visited, interactions with elements, session duration)</li>
+                    <li>Technical information (e.g., browser type, operating system, screen resolution)</li>
+                    <li>Referrer URLs (the previously visited page)</li>
+                    <li>IP addresses (which are anonymized)</li>
+                </ul>
                 <br />
-                <strong>Legal basis:</strong> Legitimate interests (Art. 6 para. 1 p. 1 lit. f) DSGVO);
+                We have configured PostHog to respect user privacy choices. If you decline cookies through our cookie banner, PostHog will not track your activities. 
                 <br />
-                <strong>Website:</strong> <a href="https://marketingplatform.google.com/intl/de/about/analytics/"
-                    target="_blank">https://marketingplatform.google.com/intl/de/about/analytics/</a>
+                For more information about PostHog's privacy practices, please visit: <a href="https://posthog.com/privacy" target="_blank" rel="noopener noreferrer">https://posthog.com/privacy</a>
                 <br />
-                <strong>Privacy Policy:</strong> <a href="https://policies.google.com/privacy"
-                    target="_blank">https://policies.google.com/privacy</a>
+                <strong>Legal basis:</strong> Consent (Art. 6 para. 1 p. 1 lit. a) DSGVO).
                 <br />
-                <strong>Order processing contract:</strong> <a
-                    href="https://business.safety.google/adsprocessorterms/"
-                    target="_blank">https://business.safety.google/adsprocessorterms/</a>
-                <br />
-                <strong>Basis
-                    Third country transfer:</strong> EU-US Data Privacy Framework (DPF),
-                Standard Contractual Clauses (<a href="https://business.safety.google/adsprocessorterms"
-                    target="_blank">https://business.safety.google/adsprocessorterms</a>)
-                <br />
-                <strong>Possibility of objection
-                    (Opt-Out):</strong> Opt-Out-Plugin: <a href="https://tools.google.com/dlpage/gaoptout?hl=de"
-                        target="_blank">https://tools.google.com/dlpage/gaoptout?hl=de</a>, Settings for the display of
-                Advertisements: <a href="https://adssettings.google.com/authenticated"
-                    target="_blank">https://adssettings.google.com/authenticated</a>.
-                <br />
-                <strong>More information:</strong> <a
-                    href="https://business.safety.google/adsservices/"
-                    target="_blank">https://business.safety.google/adsservices/</a> (types of processing and the
-                data processed).
+                <strong>Opt-out possibility:</strong> You can opt out of the use of cookies by selecting the appropriate settings in your browser or by declining cookies in our cookie banner when you first visit our website.
             </p>
 
             <br />
