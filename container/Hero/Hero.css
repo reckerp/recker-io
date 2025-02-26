@@ -8,13 +8,179 @@
     align-items: center;
     flex-direction: column;
     background-image: url("../../assets/hero-background.svg");
+    position: relative;
+    overflow: hidden;
+    padding-top: 120px;
+    z-index: 1;
 }
-@media screen and (max-width: 3000px) {
-    .app__hero-welcome{
-        margin-top: 2rem;
+
+
+/* Add one accent blob behind the welcome image */
+.app__hero-welcome::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60vw;
+    height: 60vh;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(236, 72, 153, 0.1) 0%, rgba(236, 72, 153, 0) 80%);
+    filter: blur(50px);
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+@keyframes slowFloat {
+    0% {
+        transform: translate(0, 0) scale(1);
     }
-    .app__hero-welcome img{
-        width: 45vw;
+    50% {
+        transform: translate(5%, -5%) scale(1.05);
+    }
+    100% {
+        transform: translate(-5%, 5%) scale(0.95);
+    }
+}
+
+.app__hero-welcome {
+    margin-top: 3rem;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Stacked welcome effect */
+.stacked-welcome {
+    position: relative;
+    font-family: var(--font-base);
+    font-size: 8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    perspective: 800px;
+    animation: welcomeFloat 6s ease-in-out infinite;
+    transform-style: preserve-3d;
+}
+
+@keyframes welcomeFloat {
+    0%, 100% {
+        transform: translateY(0) rotateX(5deg);
+    }
+    50% {
+        transform: translateY(-15px) rotateX(10deg);
+    }
+}
+
+.layer {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transform-style: preserve-3d;
+}
+
+.layer-1 {
+    top: 14px;
+    left: 14px;
+    color: rgba(0, 3, 10, 0.15);
+    transform: translateZ(-7px);
+}
+
+.layer-2 {
+    top: 12px;
+    left: 12px;
+    color: rgba(0, 3, 10, 0.2);
+    transform: translateZ(-6px);
+}
+
+.layer-3 {
+    top: 10px;
+    left: 10px;
+    color: rgba(0, 3, 10, 0.25);
+    transform: translateZ(-5px);
+}
+
+.layer-4 {
+    top: 8px;
+    left: 8px;
+    color: rgba(0, 3, 10, 0.3);
+    transform: translateZ(-4px);
+}
+
+.layer-5 {
+    top: 6px;
+    left: 6px;
+    color: rgba(0, 3, 10, 0.35);
+    transform: translateZ(-3px);
+}
+
+.layer-6 {
+    top: 4px;
+    left: 4px;
+    color: rgba(0, 3, 10, 0.4);
+    transform: translateZ(-2px);
+}
+
+.layer-main {
+    position: relative;
+    color: white;
+    text-shadow: 
+        0 1px 0 rgba(255, 255, 255, 0.3),
+        0 2px 3px rgba(0, 0, 0, 0.15);
+    transform: translateZ(0);
+}
+
+.app__hero-receipt-container {
+    position: relative;
+    z-index: 10;
+    margin-top: 3rem;
+    background: transparent;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.app__hero-scroll-btn {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+    border: 2px solid var(--color-mysin);
+    color: var(--color-mysin);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10;
+    animation: bounce 2s infinite;
+    transition: all 0.3s ease;
+}
+
+.app__hero-scroll-btn:hover {
+    background-color: var(--color-mysin);
+    color: var(--color-richblack);
+    transform: translateX(-50%) translateY(-5px);
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
     }
 }
 
@@ -38,18 +204,49 @@
     .app__hero-welcome{
         margin-top: 2rem;
     }
-    .app__hero-welcome img{
-        width: 75vw;
-        height: 100px;
+    .stacked-welcome {
+        font-size: 6rem;
+        perspective: 600px;
     }
+    
+    .layer-1 { top: 10px; left: 10px; transform: translateZ(-6px); }
+    .layer-2 { top: 8px; left: 8px; transform: translateZ(-5px); }
+    .layer-3 { top: 7px; left: 7px; transform: translateZ(-4px); }
+    .layer-4 { top: 6px; left: 6px; transform: translateZ(-3px); }
+    .layer-5 { top: 4px; left: 4px; transform: translateZ(-2px); }
+    .layer-6 { top: 2px; left: 2px; transform: translateZ(-1px); }
 }
 
 @media screen and (max-width: 650px) {
     .app__hero-welcome{
         margin-top: 2rem;
     }
-    .app__hero-welcome img{
-        width: 90vw;
+    .stacked-welcome {
+        font-size: 3.5rem;
+        perspective: 400px;
+    }
+    
+    .layer-1 { top: 6px; left: 6px; transform: translateZ(-5px); }
+    .layer-2 { top: 5px; left: 5px; transform: translateZ(-4px); }
+    .layer-3 { top: 4px; left: 4px; transform: translateZ(-3px); }
+    .layer-4 { top: 3px; left: 3px; transform: translateZ(-2px); }
+    .layer-5 { top: 2px; left: 2px; transform: translateZ(-1px); }
+    .layer-6 { top: 1px; left: 1px; transform: translateZ(-0.5px); }
+    
+    @keyframes welcomeFloat {
+        0%, 100% {
+            transform: translateY(0) rotateX(3deg);
+        }
+        50% {
+            transform: translateY(-8px) rotateX(6deg);
+        }
+    }
+    
+    .app__hero-scroll-btn {
+        bottom: 1rem;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
     }
 }
 

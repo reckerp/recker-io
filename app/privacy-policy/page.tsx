@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const Imprint = () => {
 
     return (
-        <div className="margin">
+        <div className="margin legal-page">
             <Heading title="Privacy Policy" subtitle="Legals" />
             <br />
             <h2 className='h3__syne'>Preamble</h2>
@@ -38,19 +38,19 @@ const Imprint = () => {
             </p>
             <br />
             <h2 className='h3__syne'>Types of data processed</h2>
-            <ul className='p__basic'>
+            <ul className='list__basic'>
                 <li>Usage data.</li>
                 <li>Meta, communication and procedural data.</li>
             </ul>
             <br />
             <h2 className='h3__syne'>Categories of affected persons</h2>
-            <ul className='p__basic'>
+            <ul className='list__basic'>
                 <li>Users.</li>
             </ul>
 
             <br />
             <h2 className='h3__syne'>Processing purposes</h2>
-            <ul className='p__basic'>
+            <ul className='list__basic'>
                 <li>Security measures.</li>
                 <li>Reach measurement.</li>
                 <li>Profiles with user-related information.</li>
@@ -68,7 +68,7 @@ const Imprint = () => {
                 privacy policy.
             </p>
             <br />
-            <ul className='p__basic'>
+            <ul className='list__basic'>
                 <li><strong>Consent (Art. 6 para. 1 p. 1 lit. a) DSGVO)</strong> - The data subject has given his/her consent
                     to the processing of personal data concerning him or her for a specific purpose or several
                     specific purposes given.</li>
@@ -164,7 +164,7 @@ const Imprint = () => {
                 Data subjects&apos; rights under the DSGVO: As a data subject, you are entitled to various rights under the DSGVO which
                 in particular from Art. 15 to 21 DSGVO:
             </p>
-            <ul className='p__basic'>
+            <ul className='list__basic'>
                 <li><strong>Right to object: You have the right, on grounds relating to your particular situation,
                     at any time against the processing of personal data concerning you, which is based on Art. 6 para.
                     1 lit. e or f DSGVO; this also applies to profiling based on these provisions.
@@ -255,7 +255,7 @@ const Imprint = () => {
                 we process the user&apos;s IP address, which is necessary to transmit the content and functions of our online services to the user&apos;s
                 to the browser or terminal device of the users.
             </p>
-            <ul className='p__basic'>
+            <ul className='list__basic'>
                 <li><strong>Types of data processed:</strong> Usage data (e.g. web pages visited, interest in content,
                     access times); meta, communication and procedural data (e.g. .IP addresses, time,
                     identification numbers, consent status).</li>
@@ -307,13 +307,14 @@ const Imprint = () => {
                 PostHog uses cookies or similar recognition technologies to collect information about your use of our website. The data is processed on servers located in the European Union (EU), specifically using PostHog&apos;s EU-hosted cloud offering. This ensures that your data remains within the EU and is subject to the protections of the GDPR.
                 <br />
                 The data collected includes:
-                <ul className='p__basic'>
-                    <li>Usage data (e.g., pages visited, interactions with elements, session duration)</li>
-                    <li>Technical information (e.g., browser type, operating system, screen resolution)</li>
-                    <li>Referrer URLs (the previously visited page)</li>
-                    <li>IP addresses (which are anonymized)</li>
-                </ul>
-                <br />
+            </p>
+            <ul className='list__basic'>
+                <li>Usage data (e.g., pages visited, interactions with elements, session duration)</li>
+                <li>Technical information (e.g., browser type, operating system, screen resolution)</li>
+                <li>Referrer URLs (the previously visited page)</li>
+                <li>IP addresses (which are anonymized)</li>
+            </ul>
+            <p className='p__basic'>
                 We have configured PostHog to respect user privacy choices. If you decline cookies through our cookie banner, PostHog will not track your activities. 
                 <br />
                 For more information about PostHog&apos;s privacy practices, please visit: <a href="https://posthog.com/privacy" target="_blank" rel="noopener noreferrer">https://posthog.com/privacy</a>

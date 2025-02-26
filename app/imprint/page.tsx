@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const Imprint = () => {
 
     return (
-        <div className="margin">
+        <div className="margin legal-page">
             <Heading title="Imprint" subtitle="Legals" />
             <br />
             <h2 className='h3__syne'>According to &sect; 5 TMG</h2>

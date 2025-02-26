@@ -1,0 +1,130 @@
+.app__experience {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    padding: 4rem 0 4rem 6rem;
+    margin-top: 4rem;
+}
+
+.app__experience-content {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    min-width: 300px;
+    padding-right: 2rem;
+}
+
+.app__experience-timeline {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-right: 6rem;
+}
+
+.app__experience-item {
+    background: rgba(0, 3, 10, 0.9);
+    border: 2px solid var(--color-bluebayoux);
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.app__experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-color: var(--color-mysin);
+}
+
+.app__experience-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.app__experience-item-company {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.app__experience-item-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app__experience-item-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.app__experience-item-info h3 {
+    margin: 0;
+    color: white;
+}
+
+.app__experience-item-info h4 {
+    margin: 0.25rem 0 0 0;
+    color: var(--color-mysin);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.app__experience-item-duration {
+    color: var(--color-aluminium);
+    font-size: 0.9rem;
+}
+
+.app__experience-item-description {
+    color: white;
+    line-height: 1.6;
+}
+
+@media screen and (min-width: 2000px) {
+    .app__experience-content {
+        min-width: 500px;
+        padding-right: 4rem;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .app__experience {
+        flex-direction: column;
+    }
+
+    .app__experience-content {
+        min-width: 100%;
+    }
+
+    .app__experience-timeline {
+        padding-right: 2rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .app__experience {
+        padding: 4rem 0 4rem 4rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .app__experience {
+        padding: 4rem 0 4rem 2rem;
+    }
+
+    .app__experience-item-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .app__experience-item-duration {
+        margin-left: 50px; /* Align with company name */
+    }
+} 

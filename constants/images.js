@@ -1,5 +1,6 @@
 import logo from "../assets/logo.svg";
 import r_black from "../assets/r-black.svg";
+import me from "../assets/me.jpg";
 
 import hero_bg from "../assets/hero-background.svg";
 import welcome from "../assets/welcome.svg";
@@ -13,6 +14,10 @@ import itutoru_image from "../assets/itutoru.png";
 import earmark_image from "../assets/earmark.png";
 import resqlme_image from "../assets/resqlme.png";
 
+// Company logos
+import mintano_logo from "../assets/mintano.png";
+import fontys_logo from "../assets/fontys.jpg";
+
 import icon_linkedin from "../assets/icons/linkedin.svg";
 import icon_github from "../assets/icons/github.svg";
 import icon_instagram from "../assets/icons/instagram.svg";
@@ -22,6 +27,7 @@ import icon_twitter from "../assets/icons/twitter.svg";
 export default {
   logo,
   r_black,
+  me,
   hero_bg,
   welcome,
   icon_linkedin,
@@ -37,4 +43,6 @@ export default {
   itutoru_image,
   earmark_image,
   resqlme_image,
+  mintano_logo,
+  fontys_logo,
 };

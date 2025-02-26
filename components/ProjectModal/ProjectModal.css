@@ -1,0 +1,315 @@
+.project-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 2rem;
+  overflow-y: auto;
+  animation: modalBackdropFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  backdrop-filter: blur(0px);
+  transition: backdrop-filter 0.35s ease;
+}
+
+.project-modal-backdrop.active {
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+}
+
+.project-modal-content {
+  background: var(--color-richblack);
+  border: 2px solid var(--color-bluebayoux);
+  border-radius: 4px;
+  width: 100%;
+  max-width: 1000px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: modalContentFadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(30px) scale(0.96);
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.project-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: var(--color-white);
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.project-modal-close:hover {
+  color: var(--color-mysin);
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(90deg);
+}
+
+.project-modal-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-modal-image-container {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-modal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.project-modal-backdrop.active .project-modal-image {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.project-modal-title-container {
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition-delay: 0.1s;
+}
+
+.project-modal-subtitle {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.project-modal-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+  color: var(--color-white);
+}
+
+.project-modal-year {
+  color: var(--color-aluminium);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.project-modal-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.project-modal-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-bluebayoux);
+  border-radius: 4px;
+  color: var(--color-white);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.project-modal-link span {
+  font-size: 0.9rem;
+}
+
+.project-modal-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-mysin);
+  transform: translateY(-2px);
+}
+
+.project-modal-body {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-modal-section-title {
+  color: var(--color-mysin);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.project-modal-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--color-mysin);
+}
+
+.project-modal-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-modal-tech-tag {
+  padding: 0.4rem 0.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-bluebayoux);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-family: var(--font-base);
+  color: var(--color-white);
+  transition: all 0.3s ease;
+}
+
+.project-modal-tech-tag:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-mysin);
+  transform: translateY(-2px);
+}
+
+.project-modal-description p,
+.project-modal-challenges p,
+.project-modal-learnings p {
+  line-height: 1.6;
+}
+
+@keyframes modalBackdropFadeIn {
+  0% { 
+    opacity: 0; 
+    background-color: rgba(0, 0, 0, 0);
+  }
+  100% { 
+    opacity: 1; 
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+}
+
+@keyframes modalContentFadeIn {
+  0% { 
+    opacity: 0; 
+    transform: translateY(30px) scale(0.96);
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes modalBackdropFadeOut {
+  0% { 
+    opacity: 1; 
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+  100% { 
+    opacity: 0; 
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes modalContentFadeOut {
+  0% { 
+    opacity: 1; 
+    transform: translateY(0) scale(1);
+  }
+  100% { 
+    opacity: 0; 
+    transform: translateY(30px) scale(0.96);
+  }
+}
+
+.project-modal-backdrop.closing {
+  animation: modalBackdropFadeOut 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  backdrop-filter: blur(0px);
+}
+
+.project-modal-backdrop.closing .project-modal-content {
+  animation: modalContentFadeOut 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media screen and (min-width: 768px) {
+  .project-modal-header {
+    flex-direction: row;
+  }
+  
+  .project-modal-image-container {
+    width: 50%;
+    height: auto;
+  }
+  
+  .project-modal-title-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .project-modal-backdrop {
+    padding: 1rem;
+  }
+  
+  .project-modal-content {
+    max-height: 85vh;
+  }
+  
+  .project-modal-title {
+    font-size: 1.5rem;
+  }
+  
+  .project-modal-body {
+    padding: 1.5rem;
+  }
+}
+
+.project-modal-body > div {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition-delay: 0.1s;
+}
+
+.project-modal-body > div:nth-child(2) {
+  transition-delay: 0.15s;
+}
+
+.project-modal-body > div:nth-child(3) {
+  transition-delay: 0.2s;
+}
+
+.project-modal-body > div:nth-child(4) {
+  transition-delay: 0.25s;
+}
+
+.project-modal-backdrop.active .project-modal-title-container,
+.project-modal-backdrop.active .project-modal-body > div {
+  opacity: 1;
+  transform: translateY(0);
+} 
