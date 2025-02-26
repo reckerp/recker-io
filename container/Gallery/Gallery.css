@@ -1,9 +1,7 @@
 .app__gallery {
     display: flex;
     flex-direction: row-reverse;
-
     gap: 4rem;
-    background: var(--color-richblack);
     padding: 4rem 0 4rem 6rem;
     margin-top: 4rem;
 }
@@ -13,17 +11,15 @@
     display: flex;
     align-items: flex-end;
     flex-direction: column;
-
-    min-width: 500px;
+    min-width: 300px;
     padding-right: 2rem;
 }
 
-
 .app__gallery-images {
-    flex: 1;
+    flex: 2;
     display: flex;
     flex-direction: row;
-    max-width: 50%;
+    max-width: 65%;
     position: relative;
 }
 
@@ -34,6 +30,7 @@
     overflow-x: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    padding: 1rem 0;
 }
 
 .app__gallery-images_container::-webkit-scrollbar {
@@ -42,43 +39,153 @@
 
 .app__gallery-images_card {
     position: relative;
-    min-width: 250px;
-    height: 450px;
+    min-width: 280px;
+    max-width: 280px;
+    height: 480px;
     margin-right: 2rem;
+    transition: all 0.3s ease;
 }
 
-.app__gallery-images_card-design{
+.app__gallery-images_card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.app__gallery-images_card-design {
     border: 2px solid var(--color-bluebayoux);
+    border-radius: 6px;
+    overflow: hidden;
+    background: rgba(0, 3, 10, 0.9);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-.app__gallery-images_card-description{
-    color: white;
-    padding: 0.5rem;
+.app__gallery-images_card-design:hover {
+    border-color: var(--color-mysin);
 }
 
-.app__gallery__image-icon {
-    position: absolute;
-    color: #fff;
-    font-size: 2rem;
-    opacity: 0;
-    transition: .5s ease;
-    cursor: pointer;
+.app__gallery-images_card-image {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
 }
 
-.app__gallery-images_card img {
+.app__gallery-images_card-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    opacity: 1;
-    transition: .5s ease;
+    object-position: top center;
+    transition: transform 0.5s ease;
 }
 
-.hover:hover {
-    opacity: .35;
+.app__gallery-images_card:hover .app__gallery-images_card-img {
+    transform: scale(1.05);
 }
 
-.app__gallery-images_card:hover .app__gallery__image-icon {
+.app__gallery-images_card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.app__gallery-images_card:hover .app__gallery-images_card-overlay {
     opacity: 1;
+}
+
+.app__gallery-images_card-button {
+    background: transparent;
+    border: 2px solid var(--color-mysin);
+    color: var(--color-white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-family: var(--font-base);
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    transform: translateY(10px);
+    opacity: 0;
+}
+
+.app__gallery-images_card:hover .app__gallery-images_card-button {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.app__gallery-images_card-button:hover {
+    background: var(--color-mysin);
+    color: var(--color-richblack);
+    transform: translateY(-2px) !important;
+}
+
+.app__gallery-images_card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.app__gallery-images_card-subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.app__gallery-images_card-title {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.25rem;
+    color: var(--color-white);
+}
+
+.app__gallery-images_card-description {
+    color: var(--color-aluminium);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    flex: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.app__gallery-images_card-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.app__gallery-images_card-link {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.app__gallery-images_card-link:hover {
+    background: var(--color-mysin);
+    color: var(--color-richblack);
+    transform: translateY(-2px);
 }
 
 .app__gallery-images_arrows {
@@ -86,7 +193,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 0 1rem;
     position: absolute;
     bottom: -10%;
@@ -96,33 +202,31 @@
     color: var(--color-mysin);
     font-size: 2rem;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .app__gallery__arrow-icon:hover {
     color: var(--color-aluminium);
+    transform: scale(1.2);
 }
 
 @media screen and (min-width: 2000px) {
-    .app__gallery-content button {
-        margin-top: 2rem;
-    }
-
     .app__gallery-content {
-        min-width: 1000px;
+        min-width: 400px;
         padding-right: 4rem;
     }
 
     .app__gallery-images_card {
-        width: 350px;
-        height: 547px;
+        min-width: 320px;
+        max-width: 320px;
+        height: 520px;
+    }
+    
+    .app__gallery-images_card-image {
+        height: 280px;
     }
 }
-@media screen and (max-width: 1999px) {
-    .app__gallery-images_card {
-        width: 240px;
-        height: 500px;
-    }
-}
+
 @media screen and (max-width: 1150px) {
     .app__gallery {
         flex-direction: column;
@@ -132,21 +236,11 @@
         max-width: 100%;
         margin: 5rem 0;
     }
-
-    .app__gallery-images_card {
-        width: 240px;
-        height: 450px;
-    }
 }
 
 @media screen and (max-width: 850px) {
     .app__gallery {
         padding: 4rem 0 4rem 4rem;
-    }
-
-    .app__gallery-images_card {
-        width: 240px;
-        height: 450px;
     }
 }
 
@@ -158,9 +252,14 @@
     .app__gallery-content {
         min-width: 100%;
     }
-
+    
     .app__gallery-images_card {
-        width: 240px;
-        height: 450px;
+        min-width: 240px;
+        max-width: 240px;
+        height: 440px;
+    }
+    
+    .app__gallery-images_card-image {
+        height: 200px;
     }
 }

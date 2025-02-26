@@ -1,17 +1,26 @@
+"use client";
 import React from 'react';
-import images from '../../constants/images'
-import Image from 'next/image'
 import "./Hero.css";
-import { HeroReceipt } from "../../components";
+import { HeroReceipt, AnimatedSection } from "../../components";
 
 const Hero: React.FC = () => {
+    const scrollToNext = () => {
+        // Scroll to the next section (WhoAmI)
+        window.scrollTo({
+            top: window.innerHeight,
+            behavior: 'smooth'
+        });
+    };
+
     return (
-        <div className="app__hero">
-            <div className="app__hero-welcome">
-                <Image src={images.welcome} alt="logo" />
+        <AnimatedSection direction="down" delay={0}>
+            <div className="app__hero">
+                <div className="app__hero-stars"></div>
+                <div className="app__hero-receipt-container">
+                    <HeroReceipt />
+                </div>
             </div>
-            <HeroReceipt />
-        </div>
+        </AnimatedSection>
     );
 };
 
