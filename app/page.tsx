@@ -1,7 +1,7 @@
 import React from 'react';
 
 import '../styles/page.css';
-import {Gallery, Hero, TechStack, WhoAmI, Experience} from '@/container';
+import {Gallery, Hero, TechStack, WhoAmI, Experience, GitActivity} from '@/container';
 import { Separator } from '@/components';
 
 const App = () => (
@@ -14,6 +14,8 @@ const App = () => (
         <Experience/>
         <Separator direction="right" />
         <TechStack/>
+        <Separator direction="left" />
+        <GitActivity/>
     </>
 );
 
