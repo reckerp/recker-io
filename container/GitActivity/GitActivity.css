@@ -1,0 +1,486 @@
+.app__gitactivity {
+    padding-left: 4rem;
+    padding-right: 8rem;
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+}
+
+.app__gitactivity-intro {
+    max-width: 800px;
+    margin: 1rem 0 2rem;
+    color: var(--color-aluminium);
+    line-height: 1.6;
+}
+
+.app__gitactivity-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.app__gitactivity-heatmap-container {
+    flex: 1;
+    background: rgba(0, 3, 10, 0.9);
+    border: 2px solid var(--color-bluebayoux);
+    padding: 2rem;
+    border-radius: 4px;
+}
+
+.app__gitactivity-stats-container {
+    flex: 1;
+    background: rgba(0, 3, 10, 0.9);
+    border: 2px solid var(--color-bluebayoux);
+    padding: 2rem;
+    border-radius: 4px;
+}
+
+.app__gitactivity-section-title {
+    color: var(--color-mysin);
+    font-family: var(--font-base);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+}
+
+.app__gitactivity-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--color-mysin);
+}
+
+.app__gitactivity-section-subtitle {
+    color: var(--color-aluminium);
+    font-family: var(--font-base);
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Heatmap Styles */
+.app__gitactivity-heatmap {
+    margin-top: 1.5rem;
+}
+
+.app__gitactivity-months {
+    display: flex;
+    margin-left: 30px;
+    margin-bottom: 5px;
+}
+
+.app__gitactivity-month {
+    flex: 1;
+    text-align: center;
+    font-family: var(--font-base);
+    font-size: 0.8rem;
+    color: var(--color-aluminium);
+}
+
+.app__gitactivity-calendar {
+    display: flex;
+}
+
+.app__gitactivity-weekdays {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 10px;
+    height: 120px;
+}
+
+.app__gitactivity-weekdays div {
+    font-family: var(--font-base);
+    font-size: 0.8rem;
+    color: var(--color-aluminium);
+}
+
+.app__gitactivity-weeks {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.app__gitactivity-weeks::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.app__gitactivity-week {
+    display: flex;
+    flex-direction: column;
+}
+
+.app__gitactivity-day {
+    width: 12px;
+    height: 12px;
+    margin: 2px;
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.app__gitactivity-day:hover {
+    transform: scale(1.2);
+}
+
+.app__gitactivity-day.empty {
+    background-color: transparent;
+}
+
+.app__gitactivity-day.intensity-0 {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.app__gitactivity-day.intensity-1 {
+    background-color: rgba(255, 180, 31, 0.2);
+}
+
+.app__gitactivity-day.intensity-2 {
+    background-color: rgba(255, 180, 31, 0.4);
+}
+
+.app__gitactivity-day.intensity-3 {
+    background-color: rgba(255, 180, 31, 0.7);
+}
+
+.app__gitactivity-day.intensity-4 {
+    background-color: rgba(255, 180, 31, 1);
+}
+
+.app__gitactivity-legend {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.app__gitactivity-legend-text {
+    font-family: var(--font-base);
+    font-size: 0.8rem;
+    color: var(--color-aluminium);
+    margin: 0 0.5rem;
+}
+
+.app__gitactivity-legend-cells {
+    display: flex;
+}
+
+/* Activity Stats Styles */
+.app__gitactivity-stats {
+    margin-top: 1.5rem;
+}
+
+.app__gitactivity-stats-title {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.app__gitactivity-stats-title h3 {
+    color: var(--color-mysin);
+    font-family: var(--font-base);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid var(--color-mysin);
+    display: inline-block;
+    padding-bottom: 0.25rem;
+    width: auto;
+}
+
+.app__gitactivity-stats-title p {
+    color: var(--color-aluminium);
+    font-family: var(--font-base);
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Axis Chart Styles */
+.app__gitactivity-axis-chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    height: 300px;
+    position: relative;
+    overflow: visible;
+    width: 100%;
+}
+
+.app__gitactivity-axis {
+    stroke: rgba(255, 255, 255, 0.15);
+    stroke-width: 1.5;
+}
+
+.app__gitactivity-polygon {
+    fill: rgba(255, 180, 31, 0.2);
+    stroke: var(--color-mysin);
+    stroke-width: 2;
+}
+
+.app__gitactivity-point {
+    fill: var(--color-mysin);
+    stroke: var(--color-richblack);
+    stroke-width: 1.5;
+}
+
+.app__gitactivity-center-point {
+    fill: rgba(255, 255, 255, 0.2);
+    stroke: var(--color-richblack);
+    stroke-width: 1;
+}
+
+.app__gitactivity-axis-label {
+    fill: var(--color-mysin);
+    font-family: var(--font-base);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.app__gitactivity-axis-label-name {
+    fill: var(--color-aluminium);
+    font-family: var(--font-base);
+    font-size: 16px;
+}
+
+.app__gitactivity-stats-note {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: left;
+}
+
+.app__gitactivity-stats-note p {
+    font-family: var(--font-base);
+    font-size: 0.9rem;
+    color: var(--color-aluminium);
+    margin-bottom: 0.5rem;
+}
+
+.app__gitactivity-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    color: var(--color-aluminium);
+    font-family: var(--font-base);
+}
+
+.app__gitactivity-error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    color: #ff6b6b;
+    font-family: var(--font-base);
+    text-align: center;
+    padding: 0 2rem;
+    background-color: rgba(255, 107, 107, 0.05);
+    border-radius: 4px;
+    border: 1px solid rgba(255, 107, 107, 0.2);
+}
+
+.app__gitactivity-empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    color: var(--color-aluminium);
+    font-family: var(--font-base);
+    text-align: center;
+    font-style: italic;
+}
+
+/* Loading animation */
+.app__gitactivity-loading::after {
+    content: '...';
+    animation: loading-dots 1.5s infinite;
+    display: inline-block;
+    width: 20px;
+    text-align: left;
+}
+
+@keyframes loading-dots {
+    0% { content: '.'; }
+    33% { content: '..'; }
+    66% { content: '...'; }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+    .app__gitactivity-container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .app__gitactivity {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .app__gitactivity-axis-chart {
+        height: 250px;
+    }
+    
+    .app__gitactivity-axis-label, 
+    .app__gitactivity-axis-label-name {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .app__gitactivity {
+        padding-left: 8rem;
+        padding-right: 12rem;
+    }
+}
+
+@media screen and (min-width: 2200px) {
+    .app__gitactivity {
+        padding-left: 16rem;
+        padding-right: 20rem;
+    }
+}
+
+.app__gitactivity-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.app__gitactivity-total-contributions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.app__gitactivity-total-count {
+    font-family: var(--font-base);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-mysin);
+}
+
+.app__gitactivity-total-label {
+    font-family: var(--font-base);
+    font-size: 14px;
+    color: var(--color-aluminium);
+    opacity: 0.8;
+}
+
+/* Recent Activity Styles - Side-by-side with two rows */
+.app__gitactivity-recent-container {
+    margin-top: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 0.75rem;
+}
+
+.app__gitactivity-recent-compact {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.app__gitactivity-recent {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.app__gitactivity-recent-title {
+    color: var(--color-mysin);
+    font-family: var(--font-base);
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+}
+
+.app__gitactivity-recent-item {
+    display: flex;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.app__gitactivity-recent-icon {
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+    min-width: 16px;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 3px;
+    color: var(--color-mysin);
+}
+
+.app__gitactivity-recent-content {
+    flex: 1;
+    overflow: hidden;
+}
+
+.app__gitactivity-recent-link {
+    color: var(--color-white);
+    font-family: var(--font-base);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+    margin-bottom: 0.15rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.app__gitactivity-recent-link:hover {
+    color: var(--color-mysin);
+}
+
+.app__gitactivity-recent-meta {
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-aluminium);
+    font-family: var(--font-base);
+    font-size: 0.75rem;
+    margin-bottom: 0.3rem;
+}
+
+.app__gitactivity-recent-description {
+    color: var(--color-aluminium);
+    font-family: var(--font-base);
+    font-size: 0.75rem;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 2.6em;
+}
+
+.app__gitactivity-recent-repo,
+.app__gitactivity-recent-stars {
+    color: var(--color-aluminium);
+}
+
+.app__gitactivity-no-data {
+    color: var(--color-aluminium);
+    font-family: var(--font-base);
+    font-style: italic;
+    text-align: center;
+    padding: 0.25rem 0;
+    font-size: 0.8rem;
+}
+
+/* Responsive adjustments for recent activity */
+@media screen and (max-width: 768px) {
+    .app__gitactivity-recent-compact {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+} 
