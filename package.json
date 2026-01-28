@@ -11,7 +11,7 @@
   "dependencies": {
     "@vercel/speed-insights": "^1.0.5",
     "client-only": "^0.0.1",
-    "next": "15.1.11",
+    "next": "16.1.5",
     "posthog-js": "^1.223.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
